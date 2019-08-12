@@ -23,8 +23,9 @@ export class ShoppingList {
         let item = this.list.find(i=> i.name === itemName)
         item.location = edit
     }
-    deleteItem = () => {
-        // your code here
+    @action deleteItem = (name) => {
+        let item = this.list.find(i=> i.name === name)
+        this.list.pop(item)
     }
 }
 
