@@ -18,8 +18,10 @@ export class ShoppingList {
     @action addItem = (name) => {
        this.list.push(new Item(name))
     }
-    editItem = () => {
-        // your code here
+    @action editItem = (itemName, newLocation) => {
+        let edit = prompt('Change item location', newLocation)
+        let item = this.list.find(i=> i.name === itemName)
+        item.location = edit
     }
     deleteItem = () => {
         // your code here

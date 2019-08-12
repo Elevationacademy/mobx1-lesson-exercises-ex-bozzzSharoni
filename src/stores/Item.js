@@ -4,7 +4,7 @@ export class Item {
     @observable name
     @observable location
     @observable completed = false
-    constructor(name) {
+    constructor(name, location) {
         this.name = name
         this.location="Super Sell"
     }
