@@ -15,8 +15,8 @@ export class ShoppingList {
 
 
     }
-    addItem = () => {
-        // your code here
+    @action addItem = (name) => {
+       this.list.push(new Item(name))
     }
     editItem = () => {
         // your code here

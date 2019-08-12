@@ -17,7 +17,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <input onChange={this.handleChange} />
+        <input onChange={this.handleChange} value={this.state.newItem}/>
         <button onClick={this.addItem}>Add</button>
         {this.props.store.list.map((l, i) => <Item item={l}
           key={i} 
